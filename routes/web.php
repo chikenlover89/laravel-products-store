@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/products/{id}', 'ProductsController@show');
+Route::get('/products', 'ProductsController@index');
+Route::get('/products/{id}/delete', 'ProductsController@delete');
+Route::post('/products/{id}/update', 'ProductsController@update');
+Route::post('/products/create', 'ProductsController@create');

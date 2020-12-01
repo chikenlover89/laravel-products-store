@@ -7,14 +7,10 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
+    /** @test */
+    public function testRouteToStart()
     {
-        $response = $this->get('/');
+        $response = $this->get('/products');
 
         $response->assertStatus(200);
     }
